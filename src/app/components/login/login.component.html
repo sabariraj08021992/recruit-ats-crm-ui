@@ -1,0 +1,46 @@
+<div class="container-fluid p-0">
+    <div class="d-flex h-100">
+        <div class="flex-column bg-primary w-40">
+           <app-banner></app-banner>
+        </div>
+        <div class="flex-column w-60 p-5 py-2">
+            <div class="sign-up-link float-end mt-5">
+                <p>Don't have an Account?<a routerLink="/signup" > Sign Up</a></p>
+            </div>
+            <div class="login-form">
+                <h4 class="text-primary">Login to Recruitment ATS & CRM</h4>
+                <h6 class="">Enter your details below.</h6>
+                <br>
+                <form [formGroup]="loginForm">
+                    <div class="form-group mt-2">
+                        <label class="control-label">Email <span class="text-danger">*</span></label>
+                        <input type="email" formControlName="user_email" class="form-control control-field"
+                            [ngClass]="{ 'is-invalid': f.user_email.errors && (f.user_email?.touched || f.user_email?.dirty) }" />
+                        <div *ngIf="f.user_email.errors && (f.user_email?.touched || f.user_email?.dirty) " class="invalid-feedback">
+                            <div *ngIf="f.user_email.errors.required">Email is required</div>
+                            <div *ngIf="f.user_email.errors.email">Invalid Email</div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group mt-2">
+                        <label class="control-label">Password <span class="text-danger">*</span></label>
+                        <input [type]="showPassword ? 'text' : 'password'" formControlName="user_password" class="form-control control-field"
+                            [ngClass]="{ 'is-invalid': f.user_password.errors && (f.user_password?.touched || f.user_password?.dirty) }" />
+
+                        <label class="control-label"><input type="checkbox" class="mt-3" (click)="togglePassword()"/> Show Password</label>
+
+                        <div *ngIf="f.user_password.errors && (f.user_password?.touched || f.user_password?.dirty)" class="invalid-feedback">
+                            <div *ngIf="f.user_password.errors.required">Password is required</div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <a routerLink="/forgotpassword" >Forgot your password?</a> 
+                        <button type="submit" [disabled]="loginForm.invalid" class="col-md-4 btn btn-primary float-end unset-border-radius"
+                            (click)="CheckForAuthentication()">Login </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

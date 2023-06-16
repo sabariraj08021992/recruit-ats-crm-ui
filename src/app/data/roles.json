@@ -1,0 +1,6 @@
+{
+    "role_id":String,
+    "role_name": String,
+    "created_by":Number,
+    "created_on":Date
+}

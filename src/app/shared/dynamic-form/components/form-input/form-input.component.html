@@ -1,0 +1,17 @@
+<div class="form-group control-group p-2" [formGroup]="group" >
+    <label class="control-label">
+        {{ config.label }}
+        <strong class="text-danger" *ngIf="config.required == true">*</strong>
+    </label>
+    <div class="control-field">
+        <input [type]="config.type" [attr.placeholder]="config.placeholder" [formControlName]="config.field_name"
+            class="form-control">
+        <p class="help" *ngIf="config?.additional_info">{{config.additional_info}}</p>
+        
+        <ng-container *ngFor="let rule of config['validation_rules']" >
+            <p class="help error_msg"
+                *ngIf="group.get(config.field_name)?.hasError(rule.error_type) && (group.get(config.field_name)?.touched || group.get(config.field_name)?.dirty)">
+                {{rule['error_msg']}}</p>
+        </ng-container>
+    </div>
+</div>

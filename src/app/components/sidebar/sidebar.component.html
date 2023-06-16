@@ -1,0 +1,80 @@
+<!-- Sidebar  -->
+<nav id="sidebar" class="navbar bg-light" [ngClass]="{'active':this.appService['sidebarFlag'] == true}" >
+    <div class="navbar-header">
+        <a href="javascript:void(0)" class="btn" id="sidebarCollapse" class="navbar-toggle" data-toggle="collapse"  (click)="toggleSidebar()" data-target="#myNavbar">
+            <fa-icon [icon]="faBars" class=" fa-xl"></fa-icon>
+        </a>
+        <a class="navbar-brand" href="javascript:void(0)" >Talent ATS</a>
+       
+    </div>
+  
+    <ul class="nav navbar-nav">
+        <li class="nav-item menu-item" routerLink="/home" [routerLinkActive]="['active']" title="Home">
+            <a>
+                <span class="custom-icon material-icons-outlined">dashboard</span> 
+                <span class="sidebar-nav-text">Home</span>
+            </a>
+        </li>
+        <li class="nav-item menu-item" routerLink="/companies" [routerLinkActive]="['active']" title="Companies" >
+            <a>
+                <span class="custom-icon material-icons-outlined">business</span> 
+                <span class="sidebar-nav-text">Companies</span>
+            </a>
+        </li>
+
+        <li class="nav-item menu-item" routerLink="/contacts" [routerLinkActive]="['active']" title="Contacts">
+            <a>
+                <span class="custom-icon material-icons-outlined">contact_page</span> 
+                <span class="sidebar-nav-text">Contacts</span>
+            </a>
+        </li>
+        <li class="nav-item menu-item" routerLink="/jobs" [routerLinkActive]="['active']" title="Jobs">
+            <a>
+                <span class="custom-icon material-icons-outlined">business_center</span> 
+                <span class="sidebar-nav-text">Jobs</span>
+            </a>
+        </li>
+        <li class="nav-item menu-item" routerLink="/candidates" [routerLinkActive]="['active']" title="Candidates">
+            <a>
+                <span class="custom-icon material-icons-outlined">people</span>   
+                <span class="sidebar-nav-text">Candidates</span>
+            </a>
+        </li>
+        <li class="nav-item menu-item" routerLink="/mailbox" [routerLinkActive]="['active']" title="MailBox">
+            <a>
+                <span class="custom-icon material-icons-outlined">email</span> 
+                <span class="sidebar-nav-text">MailBox</span>
+            </a>
+        </li>
+        <li class="nav-item menu-item" routerLink="/tasks" [routerLinkActive]="['active']" title="Task & Meetings">
+            <a>
+                <span class="custom-icon material-icons-outlined">insert_invitation</span> 
+                <span class="sidebar-nav-text">Task & Meetings</span>
+            </a>
+        </li>
+        <li class="nav-item menu-item" routerLink="/deals" [routerLinkActive]="['active']" title="Deals">
+            <a>
+                <span class="custom-icon material-icons-outlined">handshake</span> 
+                <span class="sidebar-nav-text">Deals</span>
+            </a>
+        </li>
+        <li class="nav-item menu-item" routerLink="/reports" [routerLinkActive]="['active']" title="Reports">
+            <a>
+                <span class="custom-icon material-icons-outlined">insert_chart</span> 
+                <span class="sidebar-nav-text">Reports</span>
+            </a>
+        </li>
+        <li class="nav-item menu-item" routerLink="/revenue" [routerLinkActive]="['active']" title="Revenue">
+            <a>
+                <span class="custom-icon material-icons-outlined">receipt</span> 
+                <span class="sidebar-nav-text">Revenue</span>
+            </a>
+        </li>
+        <li class="nav-item menu-item" routerLink="/settings" [routerLinkActive]="['active']" title="Settings">
+            <a>
+                <span class="custom-icon material-icons-outlined">settings</span> 
+                <span class="sidebar-nav-text">Admin & Settings</span>
+            </a>
+        </li>
+    </ul> 
+</nav>

@@ -1,0 +1,53 @@
+
+<nav id="header" class="navbar navbar-expand-lg bg-color">
+    <div class="container-fluid">
+       <div class="navbar-brand"></div>
+       <div class="navbar-end">
+            <a class="btn text-white" [ngbPopover]='addTemplate' 
+            triggers='click'  container='body' placement='bottom' title="Add">
+                <span class="custom-icon material-icons-outlined">add_circle</span> 
+            </a>
+            <a class="btn text-white" title="Notifications">
+                <span class="custom-icon material-icons-outlined">notifications</span> 
+             </a>
+            <a class="btn  text-white" [ngbPopover]='profileTemplate' 
+            triggers='click'  container='body' placement='bottom-right' title="Profile">
+            <span class="custom-icon material-icons-outlined ">account_circle</span> 
+            </a>
+       </div>
+    </div>
+</nav>
+
+<ng-template #addTemplate>
+    <div class="add_popup">
+        <ul class="list-group">
+            <li class="list-group-item" >
+                <span class="custom-icon material-icons-outlined">business</span> 
+                Company
+            </li>
+            <li class="list-group-item">
+                <span class="custom-icon material-icons-outlined">contact_page</span> 
+                Contact
+            </li>
+            <li class="list-group-item">
+                <span class="custom-icon material-icons-outlined">business_center</span> 
+                Job
+            </li>
+            <li class="list-group-item">
+                <span class="custom-icon material-icons-outlined">people</span>
+                Candidate
+            </li>
+        </ul>
+    </div>
+</ng-template>
+
+<ng-template #profileTemplate>
+    <div class="profile_popup">
+        <ul class="list-group">
+            <li class="list-group-item" routerLink="/logout"  >
+                <span class="custom-icon material-icons-outlined">logout</span>
+                Logout
+            </li>
+        </ul>
+    </div>
+</ng-template>

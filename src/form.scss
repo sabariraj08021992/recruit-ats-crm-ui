@@ -1,0 +1,44 @@
+*:focus{
+    box-shadow:unset !important;
+}
+.form-control,.ng-select{
+    font-size:0.8rem;
+}
+input,textarea,.ng-select{
+    border-radius:unset !important;
+}
+.form-control:active,.form-control:focus{
+    border-color:#007eff !important;
+}
+.control-label {
+    display: block;
+    font-size:0.8rem;
+    margin-bottom: 0.5rem;
+}
+.control-field {
+    box-sizing: border-box;
+    clear: both;
+    position: relative;
+    text-align: inherit;
+}
+form-input,form-select, form-date{
+    width:50% !important;  
+    flex: 0 0 auto;
+}
+form-textarea{
+    width:100% !important;
+    flex: 0 0 auto;
+}
+.help {
+    display: block;
+    font-size: .8rem;
+    margin-top: 0.5rem;
+    margin-bottom:0rem;
+}
+.help.error_msg {
+    color: #f14668;
+}
+.unset-border-radius{
+    border-radius:unset !important;
+}
+

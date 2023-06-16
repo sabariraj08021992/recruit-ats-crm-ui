@@ -1,0 +1,17 @@
+
+<div class="wrapper">
+    <aside *ngIf="appService?.globalNavigation">
+      <app-sidebar></app-sidebar>
+    </aside>
+    <div id="content">
+      <header *ngIf="appService?.globalNavigation">
+        <app-header></app-header>
+      </header>
+      <main id="main">
+        <router-outlet></router-outlet>
+      </main>
+    </div>
+</div>
+
+
+

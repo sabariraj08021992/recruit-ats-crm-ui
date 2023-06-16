@@ -1,0 +1,63 @@
+<div class="main-section">
+  <div class="page-header">
+    <div class="d-flex flex-1">
+      <ul class="breadcrumb">
+        <li><a routerLink="/companies" class="page-header-txt">Companies List</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="page-header-buttons">
+        <a class="btn btn-outline-primary btn-sm" (click)="loadCompanyModel('Edit')">Add Company</a>
+        <a class="btn btn-outline-primary btn-sm">
+          <fa-icon [icon]="faFilter" class="fa-sm"></fa-icon>
+        </a>
+        <a class="btn btn-outline-primary btn-sm">
+          <fa-icon [icon]="faColumns" class="fa-sm"></fa-icon>
+        </a>
+        <a class="btn btn-outline-primary btn-sm">
+          <fa-icon [icon]="faEllipsisV" class="fa-sm"></fa-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="page-content px-2">
+      <div class="table-wrapper">
+          <aside>
+
+          </aside>
+          <div class="table-content">
+              <div class="table-responsive">
+                  <table class="table ">
+                      <thead class="bg-light">
+                          <th>
+                           Company Name
+                          </th>
+                          <th>
+                            Industry
+                           </th>
+                           <th>
+                            Location
+                           </th>
+                           <th>
+                            Stage
+                           </th>
+                           <th>
+                            Created On
+                           </th>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<ng-template #loadCompanyTemplate>
+  <app-company [mode]="companyModalMode" [config]="formConfig" [data]="companyModalFormObj" (submit)="submitCompanyInfo($event)" (cancel)="cancelCompanyInfo($event)"></app-company>
+</ng-template>
+<ng-container *ngTemplateOutlet="loadCompanyTemplate"></ng-container>

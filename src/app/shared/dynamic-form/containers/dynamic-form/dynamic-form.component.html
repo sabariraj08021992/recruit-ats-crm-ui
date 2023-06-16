@@ -1,0 +1,26 @@
+<div class="card">
+    <form class="dynamic-form" [formGroup]="form" (submit)="handleSubmit($event)">
+        <div class="card-body dynamic-form-body p-0">
+            <ng-container *ngFor="let group of config; let i = index">
+                <ngb-accordion  activeIds="panel-0,panel-1">
+                    <ngb-panel id="panel-{{i}}" title="{{group.section_description}}">
+                        <ng-template ngbPanelContent>
+                            <div class="row p-0">
+                                <ng-container *ngFor="let field of group['fields'];" dynamicField [config]="field" [group]="formGroupObj[group.section]">
+
+                                </ng-container>
+                            </div>
+                        </ng-template>
+                    </ngb-panel>
+                </ngb-accordion>
+            </ng-container>
+                <br>
+                <br>
+        </div>
+       
+        <div class="card-footer bg-light">
+            <button class="btn btn-secondary btn-sm">Close</button>
+            <button class="btn btn-primary btn-sm float-end" [disabled]="!form.valid">Submit</button>
+        </div>
+    </form>
+</div>

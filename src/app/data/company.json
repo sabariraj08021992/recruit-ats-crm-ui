@@ -1,0 +1,14 @@
+{
+    "id": Integer,
+    "company_name": String,
+    "company_type":String,
+    "company_website": String,
+    "company_description": String,
+    "company_address": String,
+    "company_is_public": Boolean,
+    "company_is_visible": Boolean,
+    "company_creator": Integer,
+    "company_owner": Integer,
+    "company_created_at": DateTime,
+    "company_last_modified_at": DateTime
+}

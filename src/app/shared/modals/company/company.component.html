@@ -1,0 +1,23 @@
+<ng-template #companyModal let-offcanvas>
+    <div class="offcanvas-header" >
+      <div class="offcanvas-title">Add Company</div>
+      <button type="button" class="btn btn-outline-light btn-sm" aria-label="Close" (click)="close()">X</button>
+    </div>
+    <div class="offcanvas-body ">
+      <ng-container 
+      *ngTemplateOutlet="companyFormTemplate">
+      </ng-container>
+    </div>
+</ng-template>
+  
+<ng-template #companyFormTemplate>
+    <dynamic-form
+    [config]="config"
+    #companyForm="dynamicForm"
+    (submit)="submitData($event)"
+    (formUpdate)="formUpdateCallBack($event)"
+    >
+    </dynamic-form> 
+    {{ companyForm.valid }}
+    {{ companyForm.value | json }}
+</ng-template>

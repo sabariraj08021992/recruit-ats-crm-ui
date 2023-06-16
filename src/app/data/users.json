@@ -1,0 +1,17 @@
+{
+    "id": Integer,
+    "user_email": String,
+    "user_first_name": String,
+    "user_last_name": String,
+    "user_timezone": String,
+    "user_currency_type": String,
+    "user_role": String,
+    "user_account": String,
+    "user_phone_number": String,
+    "user_city": String,
+    "user_state": String,
+    "user_country": String,
+    "user_picture": String, // URL to the resource
+    "user_status":String
+} 
+

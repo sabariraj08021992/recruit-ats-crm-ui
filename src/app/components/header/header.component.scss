@@ -1,0 +1,20 @@
+//Header
+.bg-color{
+    background-color: #1f7dc0 !important;
+    color:#ffffff;
+}
+.header-icon{
+    color:#fff;
+}
+
+::ng-deep .popover-body{
+    padding:0;
+}
+::ng-deep .list-group{
+    width:150px;
+}
+.list-group-item:hover{
+    background:#f8f9fa;
+    cursor:pointer;
+}
+

@@ -1,0 +1,21 @@
+<div class="form-group control-group p-2" [formGroup]="group" >
+    <label class="control-label">
+        {{ config.label }}
+        <strong class="text-danger" *ngIf="config.required == true">*</strong>
+    </label>
+    <div class="control-field">
+        <ng-select [items]="config.options != undefined?config.options:null" 
+                    [searchable]="true"
+                    bindLabel="label" 
+                    bindValue="value" 
+                    [multiple]="config.multiselect != undefined?config.multiselect:false"
+                    [placeholder] ="config.placeholder!= undefined?config.placeholder:''" 
+                    [formControlName]="config.field_name" >
+        </ng-select>
+        <ng-container *ngFor="let rule of config['validation_rules']" >
+            <div class="help error_msg"
+                *ngIf="group.get(config.field_name)?.hasError(rule.error_type) && (group.get(config.field_name)?.touched || group.get(config.field_name)?.dirty)">
+                {{rule['error_msg']}}</div>
+        </ng-container>
+    </div>
+</div>

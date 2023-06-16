@@ -1,0 +1,111 @@
+@import 'bootstrap/scss/bootstrap';
+@import "@fontsource/roboto";
+@import 'material-icons/iconfont/material-icons.css';
+@import "~@ng-select/ng-select/themes/default.theme.css";
+@import './theme.scss';
+@import './form.scss';
+
+
+body {
+  font-family: "Roboto";
+  color: #000;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+#content {
+  width: 100%;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+.list-group,.popover {
+  border-radius: unset;
+}
+
+.page-header {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f3f3f3;
+  justify-content: space-between;
+  width: calc(100%);
+}
+
+.page-header-txt {
+  position: relative;
+  top: 8px;
+}
+
+.page-header-buttons {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.page-header-buttons .btn {
+  margin-right: 15px;
+}
+
+/* Style the list */
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+.btn-primary,.bg-primary{
+  background:#1f7dc0 !important;
+}
+.offcanvas-header{
+  background:#1f7dc0;
+  color:#ffffff;
+}
+.offcanvas-title{
+  font-size: 1.1rem;
+}
+
+.offCanvasWidth {
+  width: 55% !important;
+}
+.accordion-button{
+  background:#f7f7f7;
+  font-size:0.9rem;
+}
+.accordion-item,.card{
+  border-radius:unset !important;
+}
+::placeholder,.ng-placeholder{
+  opacity:0.5 !important;
+}
+
